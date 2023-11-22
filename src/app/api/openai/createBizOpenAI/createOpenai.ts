@@ -13,5 +13,12 @@ export const createOpenai = (userApiKey: string | null, endpoint?: string | null
 
   if (!apiKey) throw new Error('OPENAI_API_KEY is empty', { cause: ChatErrorType.NoAPIKey });
 
-  return new OpenAI({ apiKey, baseURL });
+  return new OpenAI({
+    apiKey,
+    baseURL,
+    defaultHeaders: {
+      'HTTP-Referer': 'http://127.0.0.1:3000', // Optional, for including your app on openrouter.ai rankings.
+      'X-Title': 'lobe-chat', // Optional. Shows in rankings on openrouter.ai.
+    },
+  });
 };
