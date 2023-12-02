@@ -22,6 +22,7 @@ export const createChatCompletion = async ({ payload, openai }: CreateChatComple
       {
         messages,
         ...params,
+        model: `openai/${params.model}`,
         stream: true,
       } as unknown as OpenAI.ChatCompletionCreateParamsStreaming,
       { headers: { Accept: '*/*' } },

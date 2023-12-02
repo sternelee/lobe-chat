@@ -1,9 +1,9 @@
 name: Deploy
 on:
   push:
-    branches: main
+    branches: openrouter
   pull_request:
-    branches: main
+    branches: openrouter
 
 jobs:
   deploy:
@@ -23,17 +23,15 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: lts/*
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Build step
-        run: "npm install && npm run build" # 📝 Update the build command(s) if necessary
+        run: "bun install && bun run build" # 📝 Update the build command(s) if necessary
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "exciting-lynx-48"
           entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts" # 📝 Update the entrypoint if necessary
-          root: "out" # 📝 Update the root if necessary
+          root: ".next" # 📝 Update the root if necessary
