@@ -2,6 +2,323 @@
 
 # Changelog
 
+### [Version 0.107.11](https://github.com/lobehub/lobe-chat/compare/v0.107.10...v0.107.11)
+
+<sup>Released on **2023-12-01**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix switch model don't work on mobile.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix switch model don't work on mobile, closes [#541](https://github.com/lobehub/lobe-chat/issues/541) ([609f505](https://github.com/lobehub/lobe-chat/commit/609f505))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.10](https://github.com/lobehub/lobe-chat/compare/v0.107.9...v0.107.10)
+
+<sup>Released on **2023-11-30**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.9](https://github.com/lobehub/lobe-chat/compare/v0.107.8...v0.107.9)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Switch session causing problem.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Switch session causing problem, closes [#535](https://github.com/lobehub/lobe-chat/issues/535) ([205bc42](https://github.com/lobehub/lobe-chat/commit/205bc42))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.8](https://github.com/lobehub/lobe-chat/compare/v0.107.7...v0.107.8)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix chatitem gap.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix chatitem gap ([772bb7c](https://github.com/lobehub/lobe-chat/commit/772bb7c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.7](https://github.com/lobehub/lobe-chat/compare/v0.107.6...v0.107.7)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Improve plugin message display.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Improve plugin message display ([208200a](https://github.com/lobehub/lobe-chat/commit/208200a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.6](https://github.com/lobehub/lobe-chat/compare/v0.107.5...v0.107.6)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: 修正调用插件查询的显示问题.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: 修正调用插件查询的显示问题 ([671ccef](https://github.com/lobehub/lobe-chat/commit/671ccef))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.5](https://github.com/lobehub/lobe-chat/compare/v0.107.4...v0.107.5)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: 修正调用插件查询的显示问题.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: 修正调用插件查询的显示问题 ([1457fe8](https://github.com/lobehub/lobe-chat/commit/1457fe8))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.4](https://github.com/lobehub/lobe-chat/compare/v0.107.3...v0.107.4)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix a bug that remove all topics when clear message.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix a bug that remove all topics when clear message ([1ab912d](https://github.com/lobehub/lobe-chat/commit/1ab912d))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.3](https://github.com/lobehub/lobe-chat/compare/v0.107.2...v0.107.3)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix a bug that trigger plugin's message type error.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix a bug that trigger plugin's message type error ([b9c7849](https://github.com/lobehub/lobe-chat/commit/b9c7849))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.2](https://github.com/lobehub/lobe-chat/compare/v0.107.1...v0.107.2)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix a bug that export a session without messages.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix a bug that export a session without messages ([8e84f35](https://github.com/lobehub/lobe-chat/commit/8e84f35))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 0.107.1](https://github.com/lobehub/lobe-chat/compare/v0.107.0...v0.107.1)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### 💄 Styles
+
+- **misc**: 优化文案.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: 优化文案 ([aaa03c5](https://github.com/lobehub/lobe-chat/commit/aaa03c5))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 0.107.0](https://github.com/lobehub/lobe-chat/compare/v0.106.0...v0.107.0)
+
+<sup>Released on **2023-11-30**</sup>
+
+#### ✨ Features
+
+- **misc**: Refactor the persist layer from zustand's persist to dexie ORM.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Refactor the persist layer from zustand's persist to dexie ORM, closes [#500](https://github.com/lobehub/lobe-chat/issues/500) ([9ae3a8e](https://github.com/lobehub/lobe-chat/commit/9ae3a8e))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 0.106.0](https://github.com/lobehub/lobe-chat/compare/v0.105.2...v0.106.0)
+
+<sup>Released on **2023-11-29**</sup>
+
+#### ✨ Features
+
+- **misc**: Support custom deletion, addition, and renaming of models.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support custom deletion, addition, and renaming of models, closes [#521](https://github.com/lobehub/lobe-chat/issues/521) [#518](https://github.com/lobehub/lobe-chat/issues/518) [#518](https://github.com/lobehub/lobe-chat/issues/518) ([65e0824](https://github.com/lobehub/lobe-chat/commit/65e0824))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 0.105.2](https://github.com/lobehub/lobe-chat/compare/v0.105.1...v0.105.2)
 
 <sup>Released on **2023-11-27**</sup>

@@ -50,6 +50,7 @@ LobeChat 是开源的高性能聊天机器人框架，支持语音合成、多�
 - [🛳 开箱即用](#-开箱即用)
   - [`A` 使用 Vercel 部署](#a-使用-vercel-部署)
   - [`B` 使用 Docker 部署](#b-使用-docker-部署)
+  - [`C` 使用 Zeabur 部署](#c-使用-zeabur-部署)
   - [环境变量](#环境变量)
 - [📦 生态系统](#-生态系统)
 - [🧩 插件体系](#-插件体系)
@@ -353,6 +354,21 @@ $ docker run -d -p 3210:3210 \
 
 <br/>
 
+### `C` 使用 Zeabur 部署
+
+如果想在 Zeabur 上部署该服务，可以按照以下步骤进行操作：
+
+- 准备好你的 [OpenAI API Key](https://platform.openai.com/account/api-keys) 。
+- 点击下方按钮开始部署： Deploy to Zeabur
+- 部署完毕后，即可开始使用；
+- 绑定自定义域名（可选）：你可以使用 Zeabur 提供的子域名，也可以选择绑定自定义域名。目前 Zeabur 提供的域名还未被污染，大多数地区都可以直连。
+
+<div align="center">
+
+[![][deploy-on-zeabur-button-image]][deploy-on-zeabur-link]
+
+</div>
+
 ### 环境变量
 
 本项目提供了一些额外的配置项，使用环境变量进行设置：
@@ -492,6 +508,8 @@ This project is [MIT](./LICENSE) licensed.
 [contributors-link]: https://github.com/lobehub/lobe-chat/graphs/contributors
 [deploy-button-image]: https://vercel.com/button
 [deploy-link]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flobehub%2Flobe-chat&env=OPENAI_API_KEY&envDescription=Find%20your%20OpenAI%20API%20Key%20by%20click%20the%20right%20Learn%20More%20button.&envLink=https%3A%2F%2Fplatform.openai.com%2Faccount%2Fapi-keys&project-name=lobe-chat&repository-name=lobe-chat
+[deploy-on-zeabur-button-image]: https://zeabur.com/button.svg
+[deploy-on-zeabur-link]: https://zeabur.com/templates/VZGGTI
 [discord-link]: https://discord.gg/AYFPHvv2jT
 [discord-shield]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=flat-square
 [discord-shield-badge]: https://img.shields.io/discord/1127171173982154893?color=5865F2&label=discord&labelColor=black&logo=discord&logoColor=white&style=for-the-badge
