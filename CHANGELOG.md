@@ -2,6 +2,256 @@
 
 # Changelog
 
+### [Version 1.2.3](https://github.com/lobehub/lobe-chat/compare/v1.2.2...v1.2.3)
+
+<sup>Released on **2024-07-01**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor the portal implement.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor the portal implement, closes [#3110](https://github.com/lobehub/lobe-chat/issues/3110) ([53fb292](https://github.com/lobehub/lobe-chat/commit/53fb292))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.2.2](https://github.com/lobehub/lobe-chat/compare/v1.2.1...v1.2.2)
+
+<sup>Released on **2024-07-01**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Display issue when select default model in System Agent.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Display issue when select default model in System Agent, closes [#3095](https://github.com/lobehub/lobe-chat/issues/3095) ([49f7f33](https://github.com/lobehub/lobe-chat/commit/49f7f33))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.2.1](https://github.com/lobehub/lobe-chat/compare/v1.2.0...v1.2.1)
+
+<sup>Released on **2024-07-01**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor the portal file.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor the portal file, closes [#3106](https://github.com/lobehub/lobe-chat/issues/3106) ([2d9635f](https://github.com/lobehub/lobe-chat/commit/2d9635f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.2.0](https://github.com/lobehub/lobe-chat/compare/v1.1.18...v1.2.0)
+
+<sup>Released on **2024-07-01**</sup>
+
+#### ✨ Features
+
+- **misc**: Add Baichuan model provider.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add Baichuan model provider, closes [#3097](https://github.com/lobehub/lobe-chat/issues/3097) ([378cf02](https://github.com/lobehub/lobe-chat/commit/378cf02))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.1.18](https://github.com/lobehub/lobe-chat/compare/v1.1.17...v1.1.18)
+
+<sup>Released on **2024-07-01**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add Gemini 1.5 stable version model & 2M context window.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add Gemini 1.5 stable version model & 2M context window, closes [#2744](https://github.com/lobehub/lobe-chat/issues/2744) ([a35143b](https://github.com/lobehub/lobe-chat/commit/a35143b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.1.17](https://github.com/lobehub/lobe-chat/compare/v1.1.16...v1.1.17)
+
+<sup>Released on **2024-07-01**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor to prepare for Chat Portal.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor to prepare for Chat Portal, closes [#3093](https://github.com/lobehub/lobe-chat/issues/3093) ([e7c1ba8](https://github.com/lobehub/lobe-chat/commit/e7c1ba8))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.1.16](https://github.com/lobehub/lobe-chat/compare/v1.1.15...v1.1.16)
+
+<sup>Released on **2024-06-29**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix clerk `UNAUTHORIZED` error after long-time hang-up.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix clerk `UNAUTHORIZED` error after long-time hang-up, closes [#3084](https://github.com/lobehub/lobe-chat/issues/3084) ([a148c3b](https://github.com/lobehub/lobe-chat/commit/a148c3b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.1.15](https://github.com/lobehub/lobe-chat/compare/v1.1.14...v1.1.15)
+
+<sup>Released on **2024-06-28**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Pin `@azure/core-rest-pipeline@1.16.0` to fix azure openai issue.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Pin `@azure/core-rest-pipeline@1.16.0` to fix azure openai issue, closes [#3066](https://github.com/lobehub/lobe-chat/issues/3066) ([f3b29f6](https://github.com/lobehub/lobe-chat/commit/f3b29f6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.1.14](https://github.com/lobehub/lobe-chat/compare/v1.1.13...v1.1.14)
+
+<sup>Released on **2024-06-27**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor plugin state.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor plugin state, closes [#3059](https://github.com/lobehub/lobe-chat/issues/3059) ([6448570](https://github.com/lobehub/lobe-chat/commit/6448570))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.1.13](https://github.com/lobehub/lobe-chat/compare/v1.1.12...v1.1.13)
+
+<sup>Released on **2024-06-27**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: -check_updates cannot be set by FEATURE_FLAGS.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: -check_updates cannot be set by FEATURE_FLAGS, closes [#3038](https://github.com/lobehub/lobe-chat/issues/3038) ([bdadfee](https://github.com/lobehub/lobe-chat/commit/bdadfee))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.1.12](https://github.com/lobehub/lobe-chat/compare/v1.1.11...v1.1.12)
 
 <sup>Released on **2024-06-26**</sup>
