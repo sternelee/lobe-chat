@@ -1,8 +1,6 @@
 import { TRPCError } from '@trpc/server';
-import urlJoin from 'url-join';
 import { z } from 'zod';
 
-import { fileEnv } from '@/config/file';
 import { AsyncTaskModel } from '@/database/server/models/asyncTask';
 import { ChunkModel } from '@/database/server/models/chunk';
 import { FileModel } from '@/database/server/models/file';
@@ -68,7 +66,10 @@ export const fileRouter = router({
       }),
     )
     .query(async ({ ctx, input }) => {
-      return ctx.fileModel.findById(input.id);
+      const item = await ctx.fileModel.findById(input.id);
+      if (!item) throw new TRPCError({ code: 'BAD_REQUEST', message: 'File not found' });
+
+      return { ...item, url: getFullFileUrl(item?.url) };
     }),
 
   getFileItemById: fileProcedure
@@ -137,7 +138,7 @@ export const fileRouter = router({
         embeddingError: embeddingTask?.error ?? null,
         embeddingStatus: embeddingTask?.status as AsyncTaskStatus,
         finishEmbedding: embeddingTask?.status === AsyncTaskStatus.Success,
-        url: urlJoin(fileEnv.NEXT_PUBLIC_S3_DOMAIN!, item.url!),
+        url: getFullFileUrl(item.url!),
       };
     });
   }),
@@ -149,6 +150,8 @@ export const fileRouter = router({
   removeFile: fileProcedure.input(z.object({ id: z.string() })).mutation(async ({ input, ctx }) => {
     const file = await ctx.fileModel.delete(input.id);
 
+    // delete the orphan chunks
+    await ctx.chunkModel.deleteOrphanChunks();
     if (!file) return;
 
     // delele the file from remove from S3 if it is not used by other files
@@ -160,6 +163,9 @@ export const fileRouter = router({
     .input(z.object({ ids: z.array(z.string()) }))
     .mutation(async ({ input, ctx }) => {
       const needToRemoveFileList = await ctx.fileModel.deleteMany(input.ids);
+
+      // delete the orphan chunks
+      await ctx.chunkModel.deleteOrphanChunks();
 
       if (!needToRemoveFileList || needToRemoveFileList.length === 0) return;
 

@@ -1,11 +1,12 @@
-import { produce } from 'immer';
-import useSWR, { SWRResponse } from 'swr';
+import { t } from 'i18next';
 import { StateCreator } from 'zustand/vanilla';
 
+import { notification } from '@/components/AntdStaticMethods';
 import { FILE_UPLOAD_BLACKLIST } from '@/const/file';
 import { fileService } from '@/services/file';
 import { ServerService } from '@/services/file/server';
 import { ragService } from '@/services/rag';
+import { UPLOAD_NETWORK_ERROR } from '@/services/upload';
 import { userService } from '@/services/user';
 import { useAgentStore } from '@/store/agent';
 import {
@@ -14,7 +15,7 @@ import {
 } from '@/store/file/reducers/uploadFileList';
 import { useUserStore } from '@/store/user';
 import { preferenceSelectors } from '@/store/user/selectors';
-import { FileListItem, FilePreview } from '@/types/files';
+import { FileListItem } from '@/types/files';
 import { UploadFileItem } from '@/types/files/upload';
 import { sleep } from '@/utils/sleep';
 import { setNamespace } from '@/utils/storeDebug';
@@ -37,12 +38,6 @@ export interface FileAction {
   ) => Promise<void>;
 
   uploadChatFiles: (files: File[]) => Promise<void>;
-
-  /**
-   * en: delete it after refactoring the Dalle plugin
-   * @deprecated
-   */
-  useFetchFile: (id: string) => SWRResponse<FilePreview>;
 }
 
 export const createFileSlice: StateCreator<
@@ -128,10 +123,30 @@ export const createFileSlice: StateCreator<
 
     // upload files and process it
     const pools = files.map(async (file) => {
-      const fileResult = await get().uploadWithProgress({
-        file,
-        onStatusUpdate: dispatchChatUploadFileList,
-      });
+      let fileResult: { id: string; url: string } | undefined;
+
+      try {
+        fileResult = await get().uploadWithProgress({
+          file,
+          onStatusUpdate: dispatchChatUploadFileList,
+        });
+      } catch (error) {
+        // skip `UNAUTHORIZED` error
+        if ((error as any)?.message !== 'UNAUTHORIZED')
+          notification.error({
+            description:
+              // it may be a network error or the cors error
+              error === UPLOAD_NETWORK_ERROR
+                ? t('upload.networkError', { ns: 'error' })
+                : // or the error from the server
+                  typeof error === 'string'
+                  ? error
+                  : t('upload.unknownError', { ns: 'error', reason: (error as Error).message }),
+            message: t('upload.uploadFailed', { ns: 'error' }),
+          });
+
+        dispatchChatUploadFileList({ id: file.name, type: 'removeFile' });
+      }
 
       if (!fileResult) return;
 
@@ -188,21 +203,4 @@ export const createFileSlice: StateCreator<
 
     await Promise.all(pools);
   },
-
-  useFetchFile: (id) =>
-    useSWR(id, async (id) => {
-      const item = await fileService.getFile(id);
-
-      set(
-        produce((draft) => {
-          if (draft.imagesMap[id]) return;
-
-          draft.imagesMap[id] = item;
-        }),
-        false,
-        n('useFetchFile'),
-      );
-
-      return item;
-    }),
 });

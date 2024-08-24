@@ -1,9 +1,12 @@
 import { fileEnv } from '@/config/file';
 import { FileModel } from '@/database/client/models/file';
 import { edgeClient } from '@/libs/trpc/client';
+import { API_ENDPOINTS } from '@/services/_url';
 import { FileMetadata, UploadFileParams } from '@/types/files';
 import { FileUploadState, FileUploadStatus } from '@/types/files/upload';
 import { uuid } from '@/utils/uuid';
+
+export const UPLOAD_NETWORK_ERROR = 'NetWorkError';
 
 class UploadService {
   uploadWithProgress = async (
@@ -13,7 +16,6 @@ class UploadService {
     const xhr = new XMLHttpRequest();
 
     const { preSignUrl, ...result } = await this.getSignedUploadUrl(file);
-
     let startTime = Date.now();
     xhr.upload.addEventListener('progress', (event) => {
       if (event.lengthComputable) {
@@ -49,7 +51,10 @@ class UploadService {
           reject(xhr.statusText);
         }
       });
-      xhr.addEventListener('error', () => reject(xhr.statusText));
+      xhr.addEventListener('error', () => {
+        if (xhr.status === 0) reject(UPLOAD_NETWORK_ERROR);
+        else reject(xhr.statusText);
+      });
       xhr.send(data);
     });
 
@@ -73,6 +78,19 @@ class UploadService {
       id: res.id,
       url: `data:${params.fileType};base64,${base64}`,
     };
+  };
+
+  /**
+   * get image File item with cors image URL
+   * @param url
+   * @param filename
+   * @param fileType
+   */
+  getImageFileByUrlWithCORS = async (url: string, filename: string, fileType = 'image/png') => {
+    const res = await fetch(API_ENDPOINTS.proxy, { body: url, method: 'POST' });
+    const data = await res.arrayBuffer();
+
+    return new File([data], filename, { lastModified: Date.now(), type: fileType });
   };
 
   private getSignedUploadUrl = async (
