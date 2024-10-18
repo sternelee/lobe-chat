@@ -2,6 +2,131 @@
 
 # Changelog
 
+### [Version 1.22.8](https://github.com/lobehub/lobe-chat/compare/v1.22.7...v1.22.8)
+
+<sup>Released on **2024-10-17**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add Yi-Lightning model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add Yi-Lightning model, closes [#4390](https://github.com/lobehub/lobe-chat/issues/4390) ([9e9fb9a](https://github.com/lobehub/lobe-chat/commit/9e9fb9a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.22.7](https://github.com/lobehub/lobe-chat/compare/v1.22.6...v1.22.7)
+
+<sup>Released on **2024-10-17**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add qwen vision model & update qwen2.5 72b to 128k for siliconcloud.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add qwen vision model & update qwen2.5 72b to 128k for siliconcloud, closes [#4380](https://github.com/lobehub/lobe-chat/issues/4380) ([e8c009b](https://github.com/lobehub/lobe-chat/commit/e8c009b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.22.6](https://github.com/lobehub/lobe-chat/compare/v1.22.5...v1.22.6)
+
+<sup>Released on **2024-10-13**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix images not go in to chat context.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix images not go in to chat context, closes [#4361](https://github.com/lobehub/lobe-chat/issues/4361) ([f17ab49](https://github.com/lobehub/lobe-chat/commit/f17ab49))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.22.5](https://github.com/lobehub/lobe-chat/compare/v1.22.4...v1.22.5)
+
+<sup>Released on **2024-10-13**</sup>
+
+#### 💄 Styles
+
+- **misc**: Reorder github model list & updata info & add new model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Reorder github model list & updata info & add new model, closes [#4360](https://github.com/lobehub/lobe-chat/issues/4360) ([e7767a5](https://github.com/lobehub/lobe-chat/commit/e7767a5))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.22.4](https://github.com/lobehub/lobe-chat/compare/v1.22.3...v1.22.4)
+
+<sup>Released on **2024-10-13**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Separate message slice and aiChat slice.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Separate message slice and aiChat slice, closes [#4359](https://github.com/lobehub/lobe-chat/issues/4359) ([7d037f6](https://github.com/lobehub/lobe-chat/commit/7d037f6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.22.3](https://github.com/lobehub/lobe-chat/compare/v1.22.2...v1.22.3)
 
 <sup>Released on **2024-10-13**</sup>
