@@ -1,6 +1,60 @@
 [
   {
     "children": {
+      "improvements": ["Refactor client mode upload to match server mode."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.46"
+  },
+  {
+    "children": {
+      "improvements": ["Add o1 model in GitHub models."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.45"
+  },
+  {
+    "children": {
+      "improvements": ["Add Gemini flash thinking model."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.44"
+  },
+  {
+    "children": {},
+    "date": "2024-12-21",
+    "version": "1.36.43"
+  },
+  {
+    "children": {
+      "fixes": ["Fix HUGGINGFACE endpoint url."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.42"
+  },
+  {
+    "children": {
+      "improvements": ["Upgrade react scan."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.41"
+  },
+  {
+    "children": {
+      "improvements": ["Seperate user keyVaults encrpyto from user model."]
+    },
+    "date": "2024-12-20",
+    "version": "1.36.40"
+  },
+  {
+    "children": {
+      "improvements": ["Refactor to use async headers()."]
+    },
+    "date": "2024-12-20",
+    "version": "1.36.39"
+  },
+  {
+    "children": {
       "improvements": ["Refactor layout props."]
     },
     "date": "2024-12-20",

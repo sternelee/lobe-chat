@@ -2,6 +2,198 @@
 
 # Changelog
 
+### [Version 1.36.46](https://github.com/lobehub/lobe-chat/compare/v1.36.45...v1.36.46)
+
+<sup>Released on **2024-12-21**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor client mode upload to match server mode.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor client mode upload to match server mode, closes [#5111](https://github.com/lobehub/lobe-chat/issues/5111) ([0361ced](https://github.com/lobehub/lobe-chat/commit/0361ced))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.45](https://github.com/lobehub/lobe-chat/compare/v1.36.44...v1.36.45)
+
+<sup>Released on **2024-12-21**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add o1 model in GitHub models.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add o1 model in GitHub models, closes [#5110](https://github.com/lobehub/lobe-chat/issues/5110) ([91dc5d7](https://github.com/lobehub/lobe-chat/commit/91dc5d7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.44](https://github.com/lobehub/lobe-chat/compare/v1.36.43...v1.36.44)
+
+<sup>Released on **2024-12-21**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add Gemini flash thinking model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add Gemini flash thinking model, closes [#5103](https://github.com/lobehub/lobe-chat/issues/5103) ([c59c1e2](https://github.com/lobehub/lobe-chat/commit/c59c1e2))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.43](https://github.com/lobehub/lobe-chat/compare/v1.36.42...v1.36.43)
+
+<sup>Released on **2024-12-21**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.42](https://github.com/lobehub/lobe-chat/compare/v1.36.41...v1.36.42)
+
+<sup>Released on **2024-12-21**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix HUGGINGFACE endpoint url.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix HUGGINGFACE endpoint url, closes [#5099](https://github.com/lobehub/lobe-chat/issues/5099) ([abc80dc](https://github.com/lobehub/lobe-chat/commit/abc80dc))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.41](https://github.com/lobehub/lobe-chat/compare/v1.36.40...v1.36.41)
+
+<sup>Released on **2024-12-21**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Upgrade react scan.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Upgrade react scan, closes [#5104](https://github.com/lobehub/lobe-chat/issues/5104) ([eed69dd](https://github.com/lobehub/lobe-chat/commit/eed69dd))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.40](https://github.com/lobehub/lobe-chat/compare/v1.36.39...v1.36.40)
+
+<sup>Released on **2024-12-20**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Seperate user keyVaults encrpyto from user model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Seperate user keyVaults encrpyto from user model, closes [#5102](https://github.com/lobehub/lobe-chat/issues/5102) ([09b63cf](https://github.com/lobehub/lobe-chat/commit/09b63cf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.36.39](https://github.com/lobehub/lobe-chat/compare/v1.36.38...v1.36.39)
+
+<sup>Released on **2024-12-20**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor to use async `headers()`.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor to use async `headers()`, closes [#5097](https://github.com/lobehub/lobe-chat/issues/5097) ([e368f38](https://github.com/lobehub/lobe-chat/commit/e368f38))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.36.38](https://github.com/lobehub/lobe-chat/compare/v1.36.37...v1.36.38)
 
 <sup>Released on **2024-12-20**</sup>
