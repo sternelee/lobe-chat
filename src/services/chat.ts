@@ -7,7 +7,7 @@ import { INBOX_GUIDE_SYSTEMROLE } from '@/const/guide';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { TracePayload, TraceTagMap } from '@/const/trace';
-import { isServerMode } from '@/const/version';
+import { isDeprecatedEdition, isServerMode } from '@/const/version';
 import {
   AgentRuntime,
   AgentRuntimeError,
@@ -40,20 +40,20 @@ import { createTraceHeader, getTraceId } from '@/utils/trace';
 import { createHeaderWithAuth, createPayloadWithKeyVaults } from './_auth';
 import { API_ENDPOINTS } from './_url';
 
-const isCanUseFC = (model: string) => {
+const isCanUseFC = (model: string, provider: string) => {
   // TODO: remove isDeprecatedEdition condition in V2.0
-  if (!isServerMode) {
+  if (isDeprecatedEdition) {
     return modelProviderSelectors.isModelEnabledFunctionCall(model)(useUserStore.getState());
   }
 
-  return aiModelSelectors.isModelSupportToolUse(model)(useAiInfraStore.getState());
+  return aiModelSelectors.isModelSupportToolUse(model, provider)(useAiInfraStore.getState());
 };
 
 const findAzureDeploymentName = (model: string) => {
   let deploymentId = model;
 
   // TODO: remove isDeprecatedEdition condition in V2.0
-  if (!isServerMode) {
+  if (isDeprecatedEdition) {
     const chatModelCards = modelProviderSelectors.getModelCardsById(ModelProvider.Azure)(
       useUserStore.getState(),
     );
@@ -74,7 +74,7 @@ const findAzureDeploymentName = (model: string) => {
 
 const isEnableFetchOnClient = (provider: string) => {
   // TODO: remove this condition in V2.0
-  if (!isServerMode) {
+  if (isDeprecatedEdition) {
     return modelConfigSelectors.isProviderFetchOnClient(provider)(useUserStore.getState());
   } else {
     return aiProviderSelectors.isProviderFetchOnClient(provider)(useAiInfraStore.getState());
@@ -124,90 +124,25 @@ interface CreateAssistantMessageStream extends FetchSSEOptions {
  * **Note**: if you try to fetch directly, use `fetchOnClient` instead.
  */
 export function initializeWithClientStore(provider: string, payload: any) {
-  // add auth payload
+  /**
+   * Since #5267, we map parameters for client-fetch in function `getProviderAuthPayload`
+   * which called by `createPayloadWithKeyVaults` below.
+   * @see https://github.com/lobehub/lobe-chat/pull/5267
+   * @file src/services/_auth.ts
+   */
   const providerAuthPayload = { ...payload, ...createPayloadWithKeyVaults(provider) };
   const commonOptions = {
-    // Some provider base openai sdk, so enable it run on browser
+    // Allow OpenAI SDK and Anthropic SDK run on browser
     dangerouslyAllowBrowser: true,
   };
-  let providerOptions = {};
-
-  switch (provider) {
-    default:
-    case ModelProvider.OpenAI: {
-      providerOptions = {
-        baseURL: providerAuthPayload?.baseURL,
-      };
-      break;
-    }
-    case ModelProvider.Azure: {
-      providerOptions = {
-        apiKey: providerAuthPayload?.apiKey,
-        apiVersion: providerAuthPayload?.azureApiVersion,
-      };
-      break;
-    }
-    case ModelProvider.Google: {
-      providerOptions = {
-        baseURL: providerAuthPayload?.baseURL,
-      };
-      break;
-    }
-    case ModelProvider.Bedrock: {
-      if (providerAuthPayload?.apiKey) {
-        providerOptions = {
-          accessKeyId: providerAuthPayload?.awsAccessKeyId,
-          accessKeySecret: providerAuthPayload?.awsSecretAccessKey,
-          region: providerAuthPayload?.awsRegion,
-          sessionToken: providerAuthPayload?.awsSessionToken,
-        };
-      }
-      break;
-    }
-    case ModelProvider.Ollama: {
-      providerOptions = {
-        baseURL: providerAuthPayload?.baseURL,
-      };
-      break;
-    }
-    case ModelProvider.Perplexity: {
-      providerOptions = {
-        apikey: providerAuthPayload?.apiKey,
-        baseURL: providerAuthPayload?.baseURL,
-      };
-      break;
-    }
-    case ModelProvider.Anthropic: {
-      providerOptions = {
-        baseURL: providerAuthPayload?.baseURL,
-      };
-      break;
-    }
-    case ModelProvider.Groq: {
-      providerOptions = {
-        apikey: providerAuthPayload?.apiKey,
-        baseURL: providerAuthPayload?.baseURL,
-      };
-      break;
-    }
-    case ModelProvider.Cloudflare: {
-      providerOptions = {
-        apikey: providerAuthPayload?.apiKey,
-        baseURLOrAccountID: providerAuthPayload?.cloudflareBaseURLOrAccountID,
-      };
-      break;
-    }
-  }
-
   /**
    * Configuration override order:
-   * payload -> providerOptions -> providerAuthPayload -> commonOptions
+   * payload -> providerAuthPayload -> commonOptions
    */
   return AgentRuntime.initializeWithProviderOptions(provider, {
     [provider]: {
       ...commonOptions,
       ...providerAuthPayload,
-      ...providerOptions,
       ...payload,
     },
   });
@@ -232,6 +167,7 @@ class ChatService {
       {
         messages,
         model: payload.model,
+        provider: payload.provider!,
         tools: enabledPlugins,
       },
       options,
@@ -242,7 +178,7 @@ class ChatService {
     const filterTools = toolSelectors.enabledSchema(enabledPlugins)(useToolStore.getState());
 
     // check this model can use function call
-    const canUseFC = isCanUseFC(payload.model);
+    const canUseFC = isCanUseFC(payload.model, payload.provider!);
 
     // the rule that model can use tools:
     // 1. tools is not empty
@@ -340,7 +276,7 @@ class ChatService {
     const isBuiltin = Object.values(ModelProvider).includes(provider as any);
 
     // TODO: remove `!isDeprecatedEdition` condition in V2.0
-    if (isServerMode && !isBuiltin) {
+    if (!isDeprecatedEdition && !isBuiltin) {
       const providerConfig = aiProviderSelectors.providerConfigById(provider)(
         useAiInfraStore.getState(),
       );
@@ -440,9 +376,11 @@ class ChatService {
       messages,
       tools,
       model,
+      provider,
     }: {
       messages: ChatMessage[];
       model: string;
+      provider: string;
       tools?: string[];
     },
     options?: FetchOptions,
@@ -513,7 +451,7 @@ class ChatService {
 
       // Inject Tool SystemRole
       const hasTools = tools && tools?.length > 0;
-      const hasFC = hasTools && isCanUseFC(model);
+      const hasFC = hasTools && isCanUseFC(model, provider);
       const toolsSystemRoles =
         hasFC && toolSelectors.enabledSystemRoles(tools)(useToolStore.getState());
 
