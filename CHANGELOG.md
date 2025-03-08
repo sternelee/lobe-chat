@@ -2,6 +2,81 @@
 
 # Changelog
 
+### [Version 1.69.3](https://github.com/lobehub/lobe-chat/compare/v1.69.2...v1.69.3)
+
+<sup>Released on **2025-03-08**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add login ui for next-auth.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add login ui for next-auth, closes [#6434](https://github.com/lobehub/lobe-chat/issues/6434) ([541f275](https://github.com/lobehub/lobe-chat/commit/541f275))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.69.2](https://github.com/lobehub/lobe-chat/compare/v1.69.1...v1.69.2)
+
+<sup>Released on **2025-03-07**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor the agent runtime implement.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor the agent runtime implement, closes [#6784](https://github.com/lobehub/lobe-chat/issues/6784) ([14a9874](https://github.com/lobehub/lobe-chat/commit/14a9874))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.69.1](https://github.com/lobehub/lobe-chat/compare/v1.69.0...v1.69.1)
+
+<sup>Released on **2025-03-07**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add Qwen QwQ model.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add Qwen QwQ model, closes [#6783](https://github.com/lobehub/lobe-chat/issues/6783) ([3d3c2ce](https://github.com/lobehub/lobe-chat/commit/3d3c2ce))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.69.0](https://github.com/lobehub/lobe-chat/compare/v1.68.11...v1.69.0)
 
 <sup>Released on **2025-03-07**</sup>
