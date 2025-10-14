@@ -2,6 +2,82 @@
 
 # Changelog
 
+### [Version 1.137.6](https://github.com/lobehub/lobe-chat/compare/v1.137.5...v1.137.6)
+
+<sup>Released on **2025-10-14**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Update Claude workflows to use oauth token, vertext ai create image.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Update Claude workflows to use oauth token, closes [#9711](https://github.com/lobehub/lobe-chat/issues/9711) ([8dcb00e](https://github.com/lobehub/lobe-chat/commit/8dcb00e))
+- **misc**: Vertext ai create image, closes [#9710](https://github.com/lobehub/lobe-chat/issues/9710) ([790d8fd](https://github.com/lobehub/lobe-chat/commit/790d8fd))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.137.5](https://github.com/lobehub/lobe-chat/compare/v1.137.4...v1.137.5)
+
+<sup>Released on **2025-10-14**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add imagen model to vertex ai.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add imagen model to vertex ai, closes [#9699](https://github.com/lobehub/lobe-chat/issues/9699) ([3b2a2c1](https://github.com/lobehub/lobe-chat/commit/3b2a2c1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.137.4](https://github.com/lobehub/lobe-chat/compare/v1.137.3...v1.137.4)
+
+<sup>Released on **2025-10-14**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Prevent Vertex AI JSON credentials from being split by comma.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Prevent Vertex AI JSON credentials from being split by comma, closes [#9703](https://github.com/lobehub/lobe-chat/issues/9703) [#9477](https://github.com/lobehub/lobe-chat/issues/9477) ([189081d](https://github.com/lobehub/lobe-chat/commit/189081d))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.137.3](https://github.com/lobehub/lobe-chat/compare/v1.137.2...v1.137.3)
 
 <sup>Released on **2025-10-14**</sup>

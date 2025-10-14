@@ -1,6 +1,27 @@
 [
   {
     "children": {
+      "fixes": ["Update Claude workflows to use oauth token, vertext ai create image."]
+    },
+    "date": "2025-10-14",
+    "version": "1.137.6"
+  },
+  {
+    "children": {
+      "improvements": ["Add imagen model to vertex ai."]
+    },
+    "date": "2025-10-14",
+    "version": "1.137.5"
+  },
+  {
+    "children": {
+      "fixes": ["Prevent Vertex AI JSON credentials from being split by comma."]
+    },
+    "date": "2025-10-14",
+    "version": "1.137.4"
+  },
+  {
+    "children": {
       "fixes": [
         "Fix mcp server connect issue and refactor web search implement, fix tools calling long name length >64 issue."
       ]
